@@ -11,7 +11,7 @@ class Pizza(models.Model):
     image_url = models.TextField(default="")
     def __str__(self):
         return self.Pizza_name
-    
+
 
 class Orders(models.Model):
     Pizza_name = models.CharField(max_length=200, default="")
