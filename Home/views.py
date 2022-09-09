@@ -1,10 +1,14 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, HttpResponse
 from .models import Address, Contact, Pizza, Orders, Profile
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .forms import ProfileForm
 from django.contrib.auth.models import AnonymousUser
 # Create your views here.
+
+def newhome(request):
+    return HttpResponse('Its new Home Page!!!')
+
 def home(request):
     pizza = Pizza.objects.all()
     last = pizza[len(pizza)-1]
