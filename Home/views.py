@@ -7,7 +7,7 @@ from django.contrib.auth.models import AnonymousUser
 # Create your views here.
 
 def newhome(request):
-    return HttpResponse('Its new Home Page!!!')
+    return HttpResponse('Its new Home Page!')
 
 def home(request):
     pizza = Pizza.objects.all()
